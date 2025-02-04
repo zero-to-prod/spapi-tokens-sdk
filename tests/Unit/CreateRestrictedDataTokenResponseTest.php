@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use Zerotoprod\SpapiTokensSdk\CreateRestrictedDataToken\CreateRestrictedDataTokenResponse;
+use Zerotoprod\SpapiTokensSdk\SpapiTokensSdk;
 
 class CreateRestrictedDataTokenResponseTest extends TestCase
 {
