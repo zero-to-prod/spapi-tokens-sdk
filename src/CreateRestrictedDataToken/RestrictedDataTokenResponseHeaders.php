@@ -42,6 +42,7 @@ class RestrictedDataTokenResponseHeaders
 
     /**
      * Unique request reference identifier.
+     *
      * @see $x_amzn_requestid
      */
     public const x_amzn_requestid = 'x-amzn-requestid';
