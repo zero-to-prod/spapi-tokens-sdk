@@ -22,7 +22,7 @@
 
 ## Introduction
 
-A Software Development Kit for the Amazons Selling Parterns API (SPAPI) Tokens API.
+A Software Development Kit for the Amazons Selling Parterns API (SPAPI) [Tokens API](https://developer-docs.amazon.com/sp-api/docs/tokens-api-v2021-03-01-reference).
 
 ## Requirements
 
@@ -40,7 +40,20 @@ This will add the package to your project’s dependencies and create an autoloa
 
 ## Usage
 
+Call the Tokens API to get a Restricted Data Token (RDT) for restricted resources.
 
+```php
+use Zerotoprod\SpapiTokensSdk\SpapiTokensSdk;
+
+$response = SpapiTokensSdk::createRestrictedDataToken(
+    'access_token',     // The access token to create the RDT
+    'path',             // The path in the restricted resource.
+    ['dataElements'],   // Indicates the type of Personally Identifiable Information requested.
+    'targetApplication',// The application ID for the target application to which access is being delegated
+    'user_agent',       // The user agent for the request.
+    'url'               // Optional. The URL for the api.
+);
+```
 
 ## Contributing
 
