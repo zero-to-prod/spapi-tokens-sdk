@@ -1,15 +1,15 @@
-# Zerotoprod\:namespace
+# Zerotoprod\SpapiTokensSdk
 
 ![](art/logo.png)
 
-[![Repo](https://img.shields.io/badge/github-gray?logo=github)](https://github.com/zero-to-prod/:slug)
-[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/zero-to-prod/:slug/test.yml?label=test)](https://github.com/zero-to-prod/:slug/actions)
-[![Packagist Downloads](https://img.shields.io/packagist/dt/zero-to-prod/:slug?color=blue)](https://packagist.org/packages/zero-to-prod/:slug/stats)
-[![php](https://img.shields.io/packagist/php-v/zero-to-prod/:slug.svg?color=purple)](https://packagist.org/packages/zero-to-prod/:slug/stats)
-[![Packagist Version](https://img.shields.io/packagist/v/zero-to-prod/:slug?color=f28d1a)](https://packagist.org/packages/zero-to-prod/:slug)
-[![License](https://img.shields.io/packagist/l/zero-to-prod/:slug?color=pink)](https://github.com/zero-to-prod/:slug/blob/main/LICENSE.md)
-[![wakatime](https://wakatime.com/badge/github/zero-to-prod/:slug.svg)](https://wakatime.com/badge/github/zero-to-prod/:slug)
-[![Hits-of-Code](https://hitsofcode.com/github/zero-to-prod/:slug?branch=main)](https://hitsofcode.com/github/zero-to-prod/:slug/view?branch=main)
+[![Repo](https://img.shields.io/badge/github-gray?logo=github)](https://github.com/zero-to-prod/spapi-tokens-sdk)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/zero-to-prod/spapi-tokens-sdk/test.yml?label=test)](https://github.com/zero-to-prod/spapi-tokens-sdk/actions)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/zero-to-prod/spapi-tokens-sdk?color=blue)](https://packagist.org/packages/zero-to-prod/spapi-tokens-sdk/stats)
+[![php](https://img.shields.io/packagist/php-v/zero-to-prod/spapi-tokens-sdk.svg?color=purple)](https://packagist.org/packages/zero-to-prod/spapi-tokens-sdk/stats)
+[![Packagist Version](https://img.shields.io/packagist/v/zero-to-prod/spapi-tokens-sdk?color=f28d1a)](https://packagist.org/packages/zero-to-prod/spapi-tokens-sdk)
+[![License](https://img.shields.io/packagist/l/zero-to-prod/spapi-tokens-sdk?color=pink)](https://github.com/zero-to-prod/spapi-tokens-sdk/blob/main/LICENSE.md)
+[![wakatime](https://wakatime.com/badge/github/zero-to-prod/spapi-tokens-sdk.svg)](https://wakatime.com/badge/github/zero-to-prod/spapi-tokens-sdk)
+[![Hits-of-Code](https://hitsofcode.com/github/zero-to-prod/spapi-tokens-sdk?branch=main)](https://hitsofcode.com/github/zero-to-prod/spapi-tokens-sdk/view?branch=main)
 
 ## Contents
 
@@ -22,7 +22,7 @@
 
 ## Introduction
 
-:description
+A Software Development Kit for the Amazons Selling Parterns API (SPAPI) [Tokens API](https://developer-docs.amazon.com/sp-api/docs/tokens-api-v2021-03-01-reference).
 
 ## Requirements
 
@@ -30,22 +30,35 @@
 
 ## Installation
 
-Install `Zerotoprod\:namespace` via [Composer](https://getcomposer.org/):
+Install `Zerotoprod\SpapiTokensSdk` via [Composer](https://getcomposer.org/):
 
 ```bash
-composer require zero-to-prod/:slug
+composer require zero-to-prod/spapi-tokens-sdk
 ```
 
 This will add the package to your project’s dependencies and create an autoloader entry for it.
 
 ## Usage
 
+Call the Tokens API to get a Restricted Data Token (RDT) for restricted resources.
 
+```php
+use Zerotoprod\SpapiTokensSdk\SpapiTokensSdk;
+
+$response = SpapiTokensSdk::createRestrictedDataToken(
+    'access_token',     // The access token to create the RDT
+    'path',             // The path in the restricted resource.
+    ['dataElements'],   // Indicates the type of Personally Identifiable Information requested.
+    'targetApplication',// The application ID for the target application to which access is being delegated
+    'user_agent',       // The user agent for the request.
+    'url'               // Optional. The URL for the api.
+);
+```
 
 ## Contributing
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues](https://github.com/zero-to-prod/:slug/issues) page if you want to contribute.
+Feel free to check the [issues](https://github.com/zero-to-prod/spapi-tokens-sdk/issues) page if you want to contribute.
 
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature-branch`).
