@@ -3,9 +3,9 @@
 namespace Zerotoprod\SpapiTokensSdk\CreateRestrictedDataToken;
 
 use Zerotoprod\Arr\Arr;
+use Zerotoprod\CurlHelperSdk\DataModels\Info;
 use Zerotoprod\DataModel\DataModel;
 use Zerotoprod\SpapiTokensSdk\DataModels\ErrorList;
-use Zerotoprod\SpapiTokensSdk\DataModels\Info;
 
 /**
  * The response schema for the createRestrictedDataToken operation.

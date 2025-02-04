@@ -2,6 +2,7 @@
 
 namespace Zerotoprod\SpapiTokensSdk\CreateRestrictedDataToken;
 
+
 use Zerotoprod\DataModel\DataModel;
 
 /**
