@@ -50,8 +50,8 @@ $response = SpapiTokensSdk::createRestrictedDataToken(
     'path',             // The path in the restricted resource.
     ['dataElements'],   // Indicates the type of Personally Identifiable Information requested.
     'targetApplication',// The application ID for the target application to which access is being delegated
-    'user_agent',       // The user agent for the request.
-    'url'               // Optional. The URL for the api.
+    'url',       // The user agent for the request.
+    'user_agent'               // Optional. The URL for the api.
 );
 ```
 
