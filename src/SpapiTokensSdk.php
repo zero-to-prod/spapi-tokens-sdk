@@ -31,21 +31,30 @@ class SpapiTokensSdk
      *                                           - shippingAddress. This includes information for fulfilling orders.
      *                                           - buyerTaxInformation. This includes information for issuing tax invoices
      * @param  string|null  $targetApplication   The application ID for the target application to which access is being delegated.
+     * @param  string       $base_uri            The URL for the api
      * @param  string|null  $user_agent          The user agent for the request.
-     * @param  string       $url                 The URL for the api
+     * @param  array        $options             Merge curl options.
      *
      * @link https://developer-docs.amazon.com/sp-api/docs/tokens-api-v2021-03-01-reference
      */
-    public static function createRestrictedDataToken(string $access_token, string $path, array $dataElements = [], ?string $targetApplication = null, ?string $user_agent = null, string $url = 'https://sellingpartnerapi-na.amazon.com/tokens/2021-03-01/restrictedDataToken'): CreateRestrictedDataTokenResponse|ErrorList
-    {
+    public static function createRestrictedDataToken(
+        string $access_token,
+        string $path,
+        array $dataElements = [],
+        ?string $targetApplication = null,
+        string $base_uri = 'https://sellingpartnerapi-na.amazon.com/tokens/2021-03-01/restrictedDataToken',
+        ?string $user_agent = null,
+        array $options = []
+    ): CreateRestrictedDataTokenResponse|ErrorList {
         return CreateRestrictedDataTokenResponse::fromResponse(
-            SpapiTokens::restrictedDataToken(
+            SpapiTokens::createRestrictedDataToken(
                 $access_token,
                 $path,
                 $dataElements,
                 $targetApplication,
+                $base_uri,
                 $user_agent,
-                $url,
+                $options
             )
         );
     }
