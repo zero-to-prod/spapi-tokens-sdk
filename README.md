@@ -45,7 +45,7 @@ Call the Tokens API to get a Restricted Data Token (RDT) for restricted resource
 ```php
 use Zerotoprod\SpapiTokensSdk\SpapiTokensSdk;
 
-$response = SpapiTokensSdk::createRestrictedDataToken(
+$CreateRestrictedDataTokenResponse = SpapiTokensSdk::createRestrictedDataToken(
     'access_token',     // The access token to create the RDT
     'path',             // The path in the restricted resource.
     ['dataElements'],   // Indicates the type of Personally Identifiable Information requested.
@@ -54,6 +54,8 @@ $response = SpapiTokensSdk::createRestrictedDataToken(
     'user_agent'        // Optional. The URL for the api.
     ['options']         // Merge curl options
 );
+
+$token = $CreateRestrictedDataTokenResponse->response->restrictedDataToken
 ```
 
 ## Contributing
