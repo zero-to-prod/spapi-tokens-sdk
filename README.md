@@ -55,7 +55,11 @@ $CreateRestrictedDataTokenResponse = SpapiTokensSdk::createRestrictedDataToken(
     ['options']         // Merge curl options
 );
 
+// Get Restricted Data Token
 $token = $CreateRestrictedDataTokenResponse->response->restrictedDataToken
+
+// Errors
+$token = $CreateRestrictedDataTokenResponse->response->errors[0]->message;
 ```
 
 ## Contributing
