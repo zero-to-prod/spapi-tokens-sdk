@@ -59,7 +59,7 @@ $CreateRestrictedDataTokenResponse = SpapiTokensSdk::createRestrictedDataToken(
 $token = $CreateRestrictedDataTokenResponse->response->restrictedDataToken
 
 // Errors
-$token = $CreateRestrictedDataTokenResponse->response->errors[0]->message;
+$CreateRestrictedDataTokenResponse->response->errors[0]->message;
 ```
 
 ## Contributing
