@@ -4,7 +4,6 @@ namespace Zerotoprod\SpapiTokensSdk;
 
 use Zerotoprod\SpapiTokens\SpapiTokens;
 use Zerotoprod\SpapiTokensSdk\CreateRestrictedDataToken\CreateRestrictedDataTokenResponse;
-use Zerotoprod\SpapiTokensSdk\DataModels\ErrorList;
 
 class SpapiTokensSdk
 {
@@ -45,7 +44,7 @@ class SpapiTokensSdk
         string $base_uri = 'https://sellingpartnerapi-na.amazon.com/tokens/2021-03-01/restrictedDataToken',
         ?string $user_agent = null,
         array $options = []
-    ): CreateRestrictedDataTokenResponse|ErrorList {
+    ): CreateRestrictedDataTokenResponse {
         return CreateRestrictedDataTokenResponse::fromResponse(
             SpapiTokens::createRestrictedDataToken(
                 $access_token,
