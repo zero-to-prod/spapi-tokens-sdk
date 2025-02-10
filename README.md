@@ -4,6 +4,7 @@
 
 [![Repo](https://img.shields.io/badge/github-gray?logo=github)](https://github.com/zero-to-prod/spapi-tokens-sdk)
 [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/zero-to-prod/spapi-tokens-sdk/test.yml?label=test)](https://github.com/zero-to-prod/spapi-tokens-sdk/actions)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/zero-to-prod/spapi-tokens-sdk/backwards_compatibility.yml?label=backwards_compatibility)](https://github.com/zero-to-prod/spapi-tokens-sdk/actions)
 [![Packagist Downloads](https://img.shields.io/packagist/dt/zero-to-prod/spapi-tokens-sdk?color=blue)](https://packagist.org/packages/zero-to-prod/spapi-tokens-sdk/stats)
 [![php](https://img.shields.io/packagist/php-v/zero-to-prod/spapi-tokens-sdk.svg?color=purple)](https://packagist.org/packages/zero-to-prod/spapi-tokens-sdk/stats)
 [![Packagist Version](https://img.shields.io/packagist/v/zero-to-prod/spapi-tokens-sdk?color=f28d1a)](https://packagist.org/packages/zero-to-prod/spapi-tokens-sdk)
