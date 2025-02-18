@@ -5,6 +5,11 @@ namespace Zerotoprod\SpapiTokensSdk;
 use Zerotoprod\SpapiTokens\SpapiTokens;
 use Zerotoprod\SpapiTokensSdk\CreateRestrictedDataToken\CreateRestrictedDataTokenResponse;
 
+/**
+ * A Software Development Kit for the Amazons Selling Parterns API (SPAPI) Tokens API.
+ *
+ * @link https://github.com/zero-to-prod/spapi-tokens-sdk
+ */
 class SpapiTokensSdk
 {
     /**
@@ -35,6 +40,7 @@ class SpapiTokensSdk
      * @param  array        $options             Merge curl options.
      *
      * @link https://developer-docs.amazon.com/sp-api/docs/tokens-api-v2021-03-01-reference
+     * @link https://github.com/zero-to-prod/spapi-tokens-sdk
      */
     public static function createRestrictedDataToken(
         string $access_token,

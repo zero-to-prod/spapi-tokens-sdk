@@ -7,6 +7,8 @@ use Zerotoprod\DataModel\Describe;
 
 /**
  * The request schema for the createRestrictedDataToken operation.
+ *
+ * @link https://github.com/zero-to-prod/spapi-tokens-sdk
  */
 class CreateRestrictedDataTokenRequest
 {
@@ -15,23 +17,30 @@ class CreateRestrictedDataTokenRequest
     /**
      * The application ID for the target application to which access is being delegated.
      *
-     * @see $targetApplication
+     * @see  $targetApplication
+     * @link https://github.com/zero-to-prod/spapi-tokens-sdk
      */
     public const targetApplication = 'targetApplication';
     /**
      * A list of restricted resources.
      * Maximum: 50
      *
-     * @see $restrictedResources
+     * @see  $restrictedResources
+     * @link https://github.com/zero-to-prod/spapi-tokens-sdk
      */
     public const restrictedResources = 'restrictedResources';
-    /** The application ID for the target application to which access is being delegated. */
+    /**
+     * The application ID for the target application to which access is being delegated.
+     *
+     * @link https://github.com/zero-to-prod/spapi-tokens-sdk
+     */
     public readonly string $targetApplication;
     /**
      * A list of restricted resources.
      * Maximum: 50
      *
      * @var array<int|string, RestrictedResource>
+     * @link https://github.com/zero-to-prod/spapi-tokens-sdk
      */
     #[Describe(['cast' => [DataModelHelper::class, 'mapOf'], 'type' => RestrictedResource::class])]
     public readonly array $restrictedResources;
