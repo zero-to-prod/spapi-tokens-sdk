@@ -6,6 +6,8 @@ use Zerotoprod\DataModel\DataModel;
 
 /**
  * An error response returned when the request is unsuccessful.
+ *
+ * @link https://github.com/zero-to-prod/spapi-tokens-sdk
  */
 class Error
 {
@@ -14,25 +16,40 @@ class Error
     /**
      * An error code that identifies the type of error that occurred.
      *
-     * @see $code
+     * @see  $code
+     * @link https://github.com/zero-to-prod/spapi-tokens-sdk
      */
     public const code = 'code';
     /**
      * A message that describes the error condition.
      *
-     * @see $message
+     * @see  $message
+     * @link https://github.com/zero-to-prod/spapi-tokens-sdk
      */
     public const message = 'message';
     /**
      * Additional details that can help the caller understand or fix the issue.
      *
-     * @see $details
+     * @see  $details
+     * @link https://github.com/zero-to-prod/spapi-tokens-sdk
      */
     public const details = 'details';
-    /** An error code that identifies the type of error that occurred. */
+    /**
+     * An error code that identifies the type of error that occurred.
+     *
+     * @link https://github.com/zero-to-prod/spapi-tokens-sdk
+     */
     public readonly string $code;
-    /** A message that describes the error condition. */
+    /**
+     * A message that describes the error condition.
+     *
+     * @link https://github.com/zero-to-prod/spapi-tokens-sdk
+     */
     public readonly string $message;
-    /** Additional details that can help the caller understand or fix the issue. */
+    /**
+     * Additional details that can help the caller understand or fix the issue.
+     *
+     * @link https://github.com/zero-to-prod/spapi-tokens-sdk
+     */
     public readonly string $details;
 }
