@@ -4,6 +4,7 @@ namespace Zerotoprod\SpapiTokensSdk\CreateRestrictedDataToken;
 
 use Zerotoprod\DataModel\DataModel;
 use Zerotoprod\DataModel\Describe;
+use Zerotoprod\DataModelHelper\DataModelHelper;
 
 /**
  * The request schema for the createRestrictedDataToken operation.

@@ -2,6 +2,8 @@
 
 namespace Zerotoprod\SpapiTokensSdk;
 
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
 use Zerotoprod\SpapiTokens\SpapiTokens;
 use Zerotoprod\SpapiTokensSdk\CreateRestrictedDataToken\CreateRestrictedDataTokenResponse;
 
@@ -39,6 +41,9 @@ class SpapiTokensSdk
      * @param  string|null  $user_agent          The user agent for the request.
      * @param  array        $options             Merge curl options.
      *
+     * @return CreateRestrictedDataTokenResponse
+     * @throws ContainerExceptionInterface
+     * @throws NotFoundExceptionInterface
      * @link https://developer-docs.amazon.com/sp-api/docs/tokens-api-v2021-03-01-reference
      * @link https://github.com/zero-to-prod/spapi-tokens-sdk
      */
@@ -51,16 +56,14 @@ class SpapiTokensSdk
         ?string $user_agent = null,
         array $options = []
     ): CreateRestrictedDataTokenResponse {
-        return CreateRestrictedDataTokenResponse::fromResponse(
-            SpapiTokens::createRestrictedDataToken(
+        return CreateRestrictedDataTokenResponse::from(
+            SpapiTokens::from(
                 $access_token,
-                $path,
-                $dataElements,
                 $targetApplication,
                 $base_uri,
                 $user_agent,
                 $options
-            )
+            )->createRestrictedDataToken($path, $dataElements, $options)
         );
     }
 }
