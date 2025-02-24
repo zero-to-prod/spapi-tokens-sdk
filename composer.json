@@ -35,7 +35,7 @@
     "php": ">=8.1",
     "zero-to-prod/data-model": "^81.9",
     "zero-to-prod/data-model-helper": "^81.9",
-    "zero-to-prod/spapi-tokens": "^1.0 || ^2.0",
+    "zero-to-prod/spapi-tokens": "^3.0",
     "zero-to-prod/arr": "^1.0",
     "zero-to-prod/curl-helper-sdk": "^1.0",
     "zero-to-prod/transformable": "^71.0"
