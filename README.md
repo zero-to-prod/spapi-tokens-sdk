@@ -17,9 +17,9 @@
 - [Introduction](#introduction)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Documentation Publishing](#documentation-publishing)
-    - [Automatic Documentation Publishing](#automatic-documentation-publishing)
+  - [Automatic Documentation Publishing](#automatic-documentation-publishing)
+- [Usage](#usage)
 - [Local Development](./LOCAL_DEVELOPMENT.md)
 - [Contributing](#contributing)
 
@@ -40,30 +40,6 @@ composer require zero-to-prod/spapi-tokens-sdk
 ```
 
 This will add the package to your project’s dependencies and create an autoloader entry for it.
-
-## Usage
-
-Call the Tokens API to get a Restricted Data Token (RDT) for restricted resources.
-
-```php
-use Zerotoprod\SpapiTokensSdk\SpapiTokensSdk;
-
-$CreateRestrictedDataTokenResponse = SpapiTokensSdk::createRestrictedDataToken(
-    'access_token',     // The access token to create the RDT
-    'path',             // The path in the restricted resource.
-    ['dataElements'],   // Indicates the type of Personally Identifiable Information requested.
-    'targetApplication',// The application ID for the target application to which access is being delegated
-    'base_uri',         // The user agent for the request.
-    'user_agent'        // Optional. The URL for the api.
-    ['options']         // Merge curl options
-);
-
-// Get Restricted Data Token
-$token = $CreateRestrictedDataTokenResponse->response->restrictedDataToken
-
-// Errors
-$CreateRestrictedDataTokenResponse->response->errors[0]->message;
-```
 
 ## Documentation Publishing
 
@@ -96,6 +72,30 @@ You can automatically publish documentation by adding the following to your `com
         ]
     }
 }
+```
+
+## Usage
+
+Call the Tokens API to get a Restricted Data Token (RDT) for restricted resources.
+
+```php
+use Zerotoprod\SpapiTokensSdk\SpapiTokensSdk;
+
+$CreateRestrictedDataTokenResponse = SpapiTokensSdk::createRestrictedDataToken(
+    'access_token',     // The access token to create the RDT
+    'path',             // The path in the restricted resource.
+    ['dataElements'],   // Indicates the type of Personally Identifiable Information requested.
+    'targetApplication',// The application ID for the target application to which access is being delegated
+    'base_uri',         // The user agent for the request.
+    'user_agent'        // Optional. The URL for the api.
+    ['options']         // Merge curl options
+);
+
+// Get Restricted Data Token
+$token = $CreateRestrictedDataTokenResponse->response->restrictedDataToken
+
+// Errors
+$CreateRestrictedDataTokenResponse->response->errors[0]->message;
 ```
 
 ## Contributing
